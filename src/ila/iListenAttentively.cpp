@@ -3,8 +3,6 @@
 #include <ll/api/mod/RegisterHelper.h>
 #include <memory>
 
-ll::Logger logger("iListenAttentively");
-
 namespace ila
 {
 

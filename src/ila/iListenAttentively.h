@@ -1,13 +1,18 @@
 #include <ll/api/mod/NativeMod.h>
 
-namespace iListenAttentively {
+namespace ila
+{
 
-class Entry {
+class iListenAttentively
+{
 
 public:
-    static Entry& getInstance();
+    static iListenAttentively& getInstance();
 
-    Entry(ll::mod::NativeMod& self) : mSelf(self) {}
+    iListenAttentively(ll::mod::NativeMod& self)
+        : mSelf(self)
+    {
+    }
 
     [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 
@@ -21,6 +26,6 @@ public:
 
 private:
     ll::mod::NativeMod& mSelf;
-};
+}; // class iListenAttentively
 
-} // namespace iListenAttentively
+} // namespace ila

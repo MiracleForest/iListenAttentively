@@ -6,4 +6,4 @@
 #include <ll/api/event/EventBus.h>
 #include <ll/api/memory/Hook.h>
 
-extern ll::Logger logger;
+#define SelfLogger(...) iListenAttentively::getInstance().getSelf().getLogger()

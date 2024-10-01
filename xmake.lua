@@ -2,16 +2,13 @@ add_rules("mode.debug", "mode.release")
 
 add_repositories("liteldev-repo https://github.com/LiteLDev/xmake-repo.git")
 
--- add_requires("levilamina x.x.x") for a specific version
--- add_requires("levilamina develop") to use develop version
--- please note that you should add bdslibrary yourself if using dev version
 add_requires("levilamina")
 
 if not has_config("vs_runtime") then
     set_runtimes("MD")
 end
 
-target("my-mod") -- Change this to your mod name.
+target("iListenAttentively")
     add_cxflags(
         "/EHa",
         "/utf-8",
@@ -27,10 +24,10 @@ target("my-mod") -- Change this to your mod name.
     add_files("src/**.cpp")
     add_includedirs("src")
     add_packages("levilamina")
-    add_shflags("/DELAYLOAD:bedrock_server.dll") -- To use symbols provided by SymbolProvider.
-    set_exceptions("none") -- To avoid conflicts with /EHa.
+    add_shflags("/DELAYLOAD:bedrock_server.dll")
+    set_exceptions("none")
     set_kind("shared")
-    set_languages("c++20")
+    set_languages("c++23")
     set_symbols("debug")
 
     after_build(function (target)

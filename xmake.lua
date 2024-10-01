@@ -48,7 +48,7 @@ target("iListenAttentively")
     set_symbols("debug")
 
     if is_mode("debug") then
-        add_defines("iMINECRAFT_DEBUG")
+        add_defines("ILA_DEBUG")
     end
 
     if has_config("tests") then
